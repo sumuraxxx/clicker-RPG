@@ -1,0 +1,4 @@
+res://scenes/main_scene.tscn
+res://scenes/enemy.tscn
+res://scenes/game_end_scene.tscn
+res://scripts/global.gd
