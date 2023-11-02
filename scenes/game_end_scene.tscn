@@ -13,15 +13,15 @@ script = ExtResource("1_b8wky")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.338
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -13.0
-offset_right = 43.5
-offset_bottom = 13.0
+anchor_bottom = 0.338
+offset_left = -173.0
+offset_top = -45.64
+offset_right = 174.0
+offset_bottom = 45.36
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
@@ -43,4 +43,21 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "restart"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.592
+anchor_right = 0.497
+anchor_bottom = 0.592
+offset_left = -170.84
+offset_top = -108.76
+offset_right = 171.16
+offset_bottom = -55.76
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "global map"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

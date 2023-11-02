@@ -22,6 +22,7 @@ func _physics_process(delta):
 		timer -= delta	
 	
 	if Player.player_health <= 0:
+		Player.player_health = 0		 
 		get_tree().change_scene_to_file("res://scenes/game_end_scene.tscn")		
 	print_debug(Player.player_health)
 	
