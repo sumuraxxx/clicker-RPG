@@ -5,3 +5,5 @@ res://scenes/global_map.tscn
 res://scripts/game_end_scene.gd
 res://scripts/enemy.gd
 res://scenes/global_map.gd
+res://scripts/global.gd
+res://scripts/main_scene.gd
