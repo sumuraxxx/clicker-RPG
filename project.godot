@@ -11,16 +11,17 @@ config_version=5
 [application]
 
 config/name="CLICER RPG"
-run/main_scene="res://scenes/main_scene.tscn"
+run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Player="*res://scripts/global.gd"
-Counter="*res://scripts/counter.gd"
-
 [display]
 
-window/size/viewport_width=720
+window/size/viewport_width=800
 window/size/viewport_height=1280
+window/size/window_width_override=400
+window/size/window_height_override=640
+
+[rendering]
+
+renderer/rendering_method="mobile"
