@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://ddlpflnqyifyd"]
+[gd_scene load_steps=3 format=3 uid="uid://ddlpflnqyifyd"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_37rha"]
+[ext_resource type="PackedScene" uid="uid://cqsvhpvjov6nh" path="res://scenes/hub.tscn" id="2_ovwad"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_37rha")
+hub_location = ExtResource("2_ovwad")

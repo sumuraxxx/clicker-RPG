@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://cqsvhpvjov6nh"]
+[gd_scene load_steps=4 format=3 uid="uid://cqsvhpvjov6nh"]
 
-[node name="Hub" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://wdb3b20njvs" path="res://sprites/Hub.png" id="1_4id4c"]
+[ext_resource type="Script" path="res://scripts/hub.gd" id="2_npm56"]
+[ext_resource type="PackedScene" uid="uid://cngynvvc4w5q3" path="res://scenes/city_map.tscn" id="3_i7d4k"]
+
+[node name="Hub" type="Sprite2D"]
+texture = ExtResource("1_4id4c")
+centered = false
+script = ExtResource("2_npm56")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 1280.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 443.0
+offset_right = 721.0
+offset_bottom = 601.0
+
+[node name="CityMap" parent="." instance=ExtResource("3_i7d4k")]
+visible = false
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="change_loc_to" from="CityMap" to="." method="_on_city_map_change_loc_to"]

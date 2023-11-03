@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cngynvvc4w5q3"]
+
+[ext_resource type="Texture2D" uid="uid://bjnhccobxruin" path="res://sprites/city_map.jpg" id="1_ssf68"]
+[ext_resource type="Script" path="res://scripts/city_map.gd" id="2_njb1h"]
+
+[node name="CityMap" type="Sprite2D"]
+position = Vector2(25, 258)
+scale = Vector2(0.55079, 0.55079)
+texture = ExtResource("1_ssf68")
+centered = false
+script = ExtResource("2_njb1h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1336.0
+offset_bottom = 886.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 797.037
+offset_top = 357.668
+offset_right = 894.037
+offset_bottom = 418.668
+
+[node name="CloseMap" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1122.02
+offset_top = 25.418
+offset_right = 1310.02
+offset_bottom = 133.418
+theme_override_font_sizes/font_size = 36
+text = "Close map"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/CloseMap" to="." method="_on_close_map_pressed"]
