@@ -1,6 +1,8 @@
+ProgressBar
 Button
-Control
+Marker2D
 Sprite2D
+Control
 Label
 CanvasLayer
 CollisionShape2D

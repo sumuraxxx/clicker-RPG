@@ -26,3 +26,4 @@ func go_to_level(level_id : int) -> void:
 func back_to_hub() -> void:
 	HUB = hub_location.instantiate()
 	add_child(HUB)
+	HUB.connect("change_scene_to_loc", go_to_level)

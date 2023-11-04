@@ -9,6 +9,9 @@ texture = ExtResource("1_ps4aj")
 centered = false
 script = ExtResource("2_3pmmn")
 
+[node name="EnemySpawn" type="Marker2D" parent="."]
+position = Vector2(650.812, 1676.12)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -26,4 +29,12 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 71
 text = "Go back"
 
+[node name="Attack" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 166.725
+offset_top = 1088.29
+offset_right = 1040.72
+offset_bottom = 2320.29
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
