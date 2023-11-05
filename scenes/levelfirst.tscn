@@ -36,5 +36,10 @@ offset_top = 1088.29
 offset_right = 1040.72
 offset_bottom = 2320.29
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(162.337, 2379.14, 162.337, 1823.08, 197.437, 1823.08, 204.75, 2333.47, 1010.59, 2337.44, 1006.2, 1823.08, 1041.3, 1823.08, 1041.3, 2379.14)
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]

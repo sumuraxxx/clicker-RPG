@@ -1,12 +1,12 @@
-res://scenes/levelfirst.tscn
-res://scripts/level_0.gd
-res://scenes/player.gd
 res://scenes/world.tscn
+res://scripts/level_0.gd
 res://scenes/hub.tscn
 res://scenes/enemyfirst.tscn
+res://scenes/levelfirst.tscn
 res://scenes/loot.tscn
 res://scenes/player.tscn
 res://scenes/inventory.tscn
 res://scenes/interface_hub.tscn
 res://scenes/city_map.tscn
 res://scripts/enemyfirst.gd
+res://scenes/coin.tscn

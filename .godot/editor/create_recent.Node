@@ -1,11 +1,15 @@
+CollisionPolygon2D
+CollisionShape2D
+StaticBody2D
+Sprite2D
+RigidBody2D
+CPUParticles2D
 ProgressBar
 Button
 Marker2D
-Sprite2D
 Control
 Label
 CanvasLayer
-CollisionShape2D
 Camera2D
 Area2D
 TextureRect

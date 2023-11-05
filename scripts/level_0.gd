@@ -14,11 +14,18 @@ func _on_button_pressed() -> void:
 	
 func _on_attack_pressed() -> void:
 	for child in $EnemySpawn.get_children():
-		child.take_damage(5)
+		if child.has_method('take_damage'):
+			child.take_damage(5)
+			
+		
+# Delay between enemy spawn
+func _on_enemy_dead():
+	get_tree().create_timer(0.5).timeout.connect(spawn_enemy)
 
 func spawn_enemy() -> void:
 	var enemy = enemy_0_scene.instantiate()
 	$EnemySpawn.add_child(enemy)
+	enemy.connect('die', _on_enemy_dead)
 	
 
 
