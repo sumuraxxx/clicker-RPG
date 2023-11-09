@@ -5,9 +5,12 @@ extends Area2D
 @export var damage_speed: int = 1
 
 var player_attack = Player.player_damage
-var timer = damage_speed
+var cooldown = damage_speed
+var can_attack = false
+
 @onready var scene = get_tree().current_scene.get_scene_file_path()
 @onready var enemy_health_text = $HealtCount
+
 
 
 func _ready():
@@ -16,20 +19,24 @@ func _ready():
 	print_debug(Player.player_health)
 
 func _physics_process(delta):
-	if timer <= 0:
-		attack()
-		timer = damage_speed
-	else:
-		timer -= delta	
-	
+	timer(delta)
+	if can_attack:
+		Player.damage_take(damage_enemy)
+		
 	if Player.player_health <= 0:
 		Player.player_health = 0		 
 		get_tree().change_scene_to_file("res://scenes/game_end_scene.tscn")		
 	print_debug(Player.player_health)
 	
-func attack():
-	Player.player_health -= damage_enemy
-
+func timer(delta):
+	if cooldown <= 0:
+		can_attack = true
+		cooldown = damage_speed
+	else:
+		can_attack = false
+		cooldown -= delta	
+	
+	
 
 func _on_button_pressed():
 	health_enemy -= player_attack
