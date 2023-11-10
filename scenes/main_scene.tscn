@@ -11,6 +11,7 @@ position = Vector2(358, 641)
 
 [node name="Enemy" parent="." instance=ExtResource("1_cg3re")]
 position = Vector2(358, 769)
+damage_enemy = 5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

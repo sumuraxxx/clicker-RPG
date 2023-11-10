@@ -8,4 +8,5 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
+	Player.health_recovary()
 	get_tree().change_scene_to_file("res://scenes/global_map.tscn")
